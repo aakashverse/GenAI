@@ -85,10 +85,9 @@ if not st.session_state.document_uploaded:
             st.rerun()  # page do not refresh but variables are refresh & ui reloaded based on updated data (session variables)
 
 
-
 ## chat ui
 if st.session_state.document_uploaded and st.session_state.agent:
-    
+
     for message in st.session_state.messages:
         st.chat_message(message["role"]).markdown(message["content"])
 
@@ -101,6 +100,7 @@ if st.session_state.document_uploaded and st.session_state.agent:
             {"messages": [{"role":"user", "content":query}]},
             {"configurable":{"thread_id":1}}
         )
+
         answer = response["messages"][-1].content
         st.chat_message("ai").markdown(answer)
         st.session_state.messages.append({"role":"ai", "content":answer})
