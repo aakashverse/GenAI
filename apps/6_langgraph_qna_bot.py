@@ -21,7 +21,7 @@ def chatBotNode(state: ChatState) -> ChatState:
     state.messages = [res]
     return state
 
-
+# memory
 memory = InMemorySaver()
 
 # make graph
@@ -37,7 +37,7 @@ while True:
     query = input("User: ")
 
     if query.lower() in ["exit", "quit", "bye"]:
-        print("Good bye, Take care :)")
+        print("Good bye, Take care :>")
         break
 
     res = graph.invoke(
