@@ -19,3 +19,6 @@ langchain-huggingface
 transformers
 huggingface-hub
 grandalf
+youtube-transcript-api 
+faiss-cpu
+sentence-transformers
